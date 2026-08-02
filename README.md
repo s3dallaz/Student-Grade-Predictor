@@ -1,117 +1,142 @@
+# 🎓 Student Grade Predictor
+
+A Machine Learning project that predicts students' final grades based on academic, family, and social factors.
+
+This project demonstrates a complete Machine Learning workflow, starting from data exploration and preprocessing to model evaluation. It also includes a custom implementation of **Linear Regression from scratch using Gradient Descent**, whose performance is compared against Scikit-learn's implementation.
+
+---
+
 ## 📖 Project Overview
 
-This project aims to predict students' final grades based on various academic, family, and social factors.
+The objective of this project is to estimate a student's final grade (`G3`) using information about their academic performance, family background, and lifestyle.
 
-The model predicts students' final grades using multiple features, including:
+The project follows a complete Machine Learning pipeline including:
 
-- Study hours
-- Sleep hours
-- Parents' education
-- Family relationships
-- Alcohol consumption
-- Parents' marital status
-- Family size
+- Exploratory Data Analysis (EDA)
+- Data Preprocessing
+- Feature Encoding
+- Feature Scaling
+- Model Training
+- Model Evaluation
+- Custom Linear Regression Implementation
 
-...and many other relevant features available in the dataset.
-
-
+---
 
 ## 🎯 Problem Statement
 
 Can a student's final grade be predicted using academic, family, and social factors?
 
-The objective of this project is to build and evaluate machine learning models that estimate a student's final grade based on multiple input features.
+This project investigates that question by building and evaluating Linear Regression models using the Student Performance dataset.
 
-
-
-
+---
 
 ## 📊 Dataset
 
-This Dataset consists of:
+**Student Performance Dataset**
 
-- Samples: 395
-- Features: 33
-- Task: Regression
+- **Samples:** 395 students
+- **Features:** 33
+- **Target:** `G3` (Final Grade)
+- **Task:** Regression
 
-It can be used for Regression as well as Analysis tasks. 
+Some important features include:
 
-And also contains some unique features like,
+- Study Time
+- Parents' Education
+- Family Size
+- Parents' Cohabitation Status
+- Family Relationship Quality
+- Alcohol Consumption
+- Travel Time
+- Previous Failures
+- Internet Access
+- Absences
 
-- Parents education
-- Family relations
-- Alcohol consumption
-- Marital status of parents
-- Family size
+Dataset:
 
-It might contain imbalanced category features. So, it's advisable to clean and preprocess before performing the desired task.
+> https://www.kaggle.com/code/mohamedredaibrahim/student-performance-dataset/input
 
-Dataset link (Kaggle): https://www.kaggle.com/code/mohamedredaibrahim/student-performance-dataset/input
+---
 
-
-
-## 🛠️ Technologies Used
+## 🛠 Technologies Used
 
 - Python
-- Numpy
+- NumPy
 - Pandas
+- Matplotlib
 - Scikit-learn
 - Jupyter Notebook
-- Matplotlib
 
-
-
+---
 
 ## ⚙️ Project Pipeline
 
-1. Understand problem, Read and implement dataset 
+1. Data Understanding
+2. Exploratory Data Analysis (EDA)
+3. Data Cleaning
+4. Feature Encoding
+5. Train/Test Split
+6. Feature Scaling
+7. Baseline Model using Scikit-learn
+8. Linear Regression from Scratch (Gradient Descent)
+9. Model Evaluation
+10. Performance Comparison
 
-2. Perform Exploratory Data Analysis (EDA)
+---
 
-    - Shape?
-    - Data types?
-    - Missing values?
-    - Duplicates?
-    - Distiributions?
-    - Correlations
+## 📈 Results
 
-3. Clean dataset
+Both implementations produced equivalent performance metrics, confirming the correctness of the custom Gradient Descent implementation.
 
-4. pick usefull feartures , feature engineering
+Evaluation Metrics:
 
-5. Preprocess features
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- R² Score
 
-    - Encoding
-    - Scaling
-    - Imputation (if needed)
+> Numerical results will be added after further experimentation.
 
-6. Train/Test split
+---
 
-7. Feature scaling
+## 📂 Project Structure
 
-7. Pick the right model
+```text
+Student_grade_predictor/
+│
+├── dataset/
+│
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_data_preprocessing.ipynb
+│   └── 03_training.ipynb
+│
+├── src/
+│   ├── __init__.py
+│   └── linear_regression_from_scratch.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-8. Train that model on the data
+---
 
-9. Evaluate using proper metrics
+## 🚀 Future Improvements
 
-    - MAE
-    - RMSE
-    - R²
+- Feature Engineering
+- Hyperparameter Tuning
+- Cross Validation
+- Compare with Decision Trees
+- Compare with Random Forest
+- Compare with Gradient Boosting Models
+- Improve Feature Selection
+- Build an interactive web application
 
-10. improve model 
+---
 
-    - Hyperparameter tuning.
-    - Try another model.
-    - Better features.
+## 👨‍💻 Author
 
+**Abdelrahman Mohamed Saadallah**
 
-
-
-
-
-
-
-📈 Results
-
-🚀 Future Improvements
+Artificial Intelligence Student | Machine Learning Enthusiast
