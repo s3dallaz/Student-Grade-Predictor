@@ -6,6 +6,7 @@ class LinearRegression:
         self.learning_rate = learning_rate
         self.cost_history = []
 
+
     def fit(self, X_train , y_train):
 
         features = X_train.shape[1]
@@ -29,10 +30,12 @@ class LinearRegression:
                 print(f"Epoch {epoch + 1}: cost = {cost}")
 
 
+
     def predict(self , X ):
         predictions = np.dot(X , self.weights) + self.bias
 
         return predictions
+
 
 
     def compute_cost(self , y , predictions):
@@ -44,6 +47,7 @@ class LinearRegression:
         mse = np.mean(squared_error)
 
         return mse
+
 
 
     def compute_gradients(self , X , y , predictions):
